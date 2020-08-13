@@ -27,7 +27,7 @@ jobs:
         # Recommended is to use version because its the working version if you ref a branch then a breaking change might happen and break your workflow
         uses: actions/hello-world-javascript-action@v1
         with:
-          who-to-greet: Mert
+          who-to-greet: Mert Alnuaimi
 
       - name: log greeting time
         run: echo "${{steps.greet.outputs.time}}"
