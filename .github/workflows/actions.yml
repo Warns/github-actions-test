@@ -10,6 +10,8 @@ jobs:
         run: |
           pwd
           ls
+      - name: checkout
+        uses: /actions/checkout@v1
       - name: Simple JS Action
         id: greet
         # Recommended is to use version because its the working version if you ref a branch then a breaking change might happen and break your workflow
