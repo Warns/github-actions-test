@@ -32,6 +32,7 @@ jobs:
         with:
           entrypoint: ./script.sh
           args: "Some string"
+      # Send a slack message
       - name: Send a slack message
         uses: docker://technosophos/slack-notify
         env:
