@@ -15,6 +15,7 @@ jobs:
         with:
           entrypoint: "/bin/echo"
           args: "Hello World"
+
       # Log node version
       - name: Log node version
         run: node -v
@@ -23,6 +24,7 @@ jobs:
         with:
           entrypoint: /usr/local/bin/node
           args: -v
+
       # Run a script
       - uses: actions/checkout@v1
       - name: Run a script
@@ -30,6 +32,12 @@ jobs:
         with:
           entrypoint: ./script.sh
           args: "Some string"
+      - name: Send a slack message
+        uses: docker://technosophos/slack-notify
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "Merhaba, Bu bir GitHub Actions denemesidir 👾"
+
   node-docker:
     runs-on: ubuntu-latest
     services:
