@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       app:
-        image: docker pull alialaa17/node-api:latest
+        image: alialaa17/node-api:latest
         ports:
           - 3001:3000
 
@@ -20,3 +20,5 @@ jobs:
         run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "dwded"}'''
       - name: Get users
         run: curl http://localhost:3001/api/users
+      - name: Get users
+        run: curl http://localhost:3001/api/user
