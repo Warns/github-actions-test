@@ -31,7 +31,7 @@ jobs:
         uses: docker://node:12.14.1-alpine3.10
         with:
           entrypoint: ./script.sh
-          args: "Some strings"
+          args: "Some string"
 
       # # Send a slack message
       # - name: Send a slack message
@@ -55,7 +55,7 @@ jobs:
 
     steps:
       - name: Post a user
-        run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "dwded"}'''
+        run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "Mert","address": "Earth"}'''
       - name: Get users
         run: curl http://localhost:3001/api/users
       - name: Get users
