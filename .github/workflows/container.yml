@@ -33,9 +33,9 @@ jobs:
           entrypoint: ./script.sh
           args: "Some string"
 
-        # # Send a slack message
-        # - name: Send a slack message
-        #   uses: docker://technosophos/slack-notify
+        # Send a slack message
+      - name: Send a slack message
+        uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: "Merhaba, Bu bir GitHub Actions denemesidir 👾"
