@@ -38,7 +38,7 @@ jobs:
         uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "Merhaba, Bu bir GitHub Actions denemesidir 👾"
+          SLACK_MESSAGE: "Merhaba, Bu bir GitHub Actions denemesidir! 👾"
 
   node-docker:
     runs-on: ubuntu-latest
